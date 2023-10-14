@@ -26,9 +26,7 @@ public class RatInMaze {
 
             return true;
         }
-        if (solveMaze(maze,x-1,y,path)){
-            return true;
-        }
+        if (solveMaze(maze,x-1,y,path)) return true;
         if (solveMaze(maze,x+1,y,path)) return true;
         if (solveMaze(maze,x,y+1,path)) return true;
         if (solveMaze(maze,x,y-1,path)) return true;
