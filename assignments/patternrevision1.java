@@ -10,7 +10,7 @@ public class patternrevision1 {
             n = in.nextInt();
         }
 //        pattern4(n);
-        char c = 'A';
+//        char c = 'A';
 //        System.out.println((char)(c));
 
         //Diamond
@@ -79,7 +79,8 @@ public class patternrevision1 {
 //            }
 //            System.out.println();
 //        }
-        pattern20(n);
+        System.out.println(skipChar("baccad"," ",'a'));
+//        pattern20(n);
     }
 
     public static void pattern20(int n) {
@@ -108,6 +109,17 @@ public class patternrevision1 {
             }
             System.out.println();
         }
+    }
+
+    public static String skipChar(String str,String ans,char ch){
+        if (str.isEmpty()){
+            return " ";
+        }
+        if (str.charAt(0)!=ch){
+            ans = ans+str.charAt(0);
+        }
+        String smallAns = skipChar(str.substring(1),ans,ch);
+        return ans+smallAns;
     }
 
     public static void pattern4(int n){
